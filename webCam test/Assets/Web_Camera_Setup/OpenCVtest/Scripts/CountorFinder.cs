@@ -27,7 +27,9 @@ public class CountorFinder : WebCamera
         Cv2.CvtColor(image, prossesedImage, ColorConversionCodes.BGR2GRAY);
         Cv2.Threshold(prossesedImage, prossesedImage, Thereshold, 255, ThresholdTypes.BinaryInv);
         Cv2.FindContours(prossesedImage, out countours, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, null);
-
+        
+        
+        
         polygonCollider.pathCount = 0;
         
         foreach (Point[] countour in countours)
