@@ -26,7 +26,9 @@ public class UDPReceive : MonoBehaviour
         "The data can be printed to the console by setting the printToConsole variable to true. " +
         "The startRecieving variable can be set to false to stop receiving data. " +
         "The data can be accessed by other scripts by using the data variable ";
-    
+
+    [TextArea(3, 10)] public string note =
+        "The default camera can only be changed in the python hand tracking script.";
     
     public void Start()
     {
