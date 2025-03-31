@@ -5,13 +5,12 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-public class UDPReceive : MonoBehaviour
+public class UDPBody : MonoBehaviour
 {
-    
     Thread receiveThread;
     UdpClient client; 
     [Tooltip("This this the port the data will be received on form the python script make sure the are the same.")]
-    public int port = 5052;
+    public int port = 5053;
     [Tooltip("When True will get position data from python when false will not receive data from python.")]
     public bool startRecieving = true;
     [Tooltip("When True will print the data to the console.")]
@@ -19,7 +18,7 @@ public class UDPReceive : MonoBehaviour
     [Tooltip("This will show all incoming data from python.")] 
     public string data;
 
-    [TextArea(3, 10)] public string UDP_Hands_notes =
+    [TextArea(3, 10)] public string UDP_Body_notes =
         "This script will receive data from a python script that is sending data over UDP. " +
         "The data will be received on the port that is set in the port variable. " +
         "The data will be stored in the data variable. " +
